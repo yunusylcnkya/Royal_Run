@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         movement = context.ReadValue<Vector2>();
-        Debug.Log(movement);
     }
 
     private void HandleMovement()

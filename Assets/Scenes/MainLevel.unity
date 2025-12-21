@@ -129,8 +129,10 @@ GameObject:
   m_Component:
   - component: {fileID: 151435795}
   - component: {fileID: 151435797}
+  - component: {fileID: 151435800}
   - component: {fileID: 151435796}
   - component: {fileID: 151435798}
+  - component: {fileID: 151435799}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -242,6 +244,41 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &151435799
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151435794}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.21988249
+  m_Height: 1.9195582
+  m_Direction: 1
+  m_Center: {x: -0.0019318461, y: 0.94660395, z: 0}
+--- !u!114 &151435800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151435794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc748c570a706cd44bca673f2d949ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollisionHandler
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
