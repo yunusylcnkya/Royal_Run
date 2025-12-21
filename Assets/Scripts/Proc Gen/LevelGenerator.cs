@@ -3,11 +3,13 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
+    [SerializeField] CameraController cameraController;
     [SerializeField] GameObject chunkPrefab;
     [SerializeField] int startingChunkAmount = 12;
     [SerializeField] Transform chunkParent;
     [SerializeField] float chunkLength = 10f;
     [SerializeField] float moveSpeed = 8f;
+    [SerializeField] float minMoveSpeed = 2f;
 
     List<GameObject> chunks = new List<GameObject>();
     //GameObject[] chunks = new GameObject[12];
@@ -20,6 +22,16 @@ public class LevelGenerator : MonoBehaviour
     void Update()
     {
         MoveChunks();
+    }
+    public void changeChunkMoveSpeed(float speedAmount)
+    {
+        moveSpeed += speedAmount;
+        if (moveSpeed < minMoveSpeed)
+        {
+            moveSpeed = minMoveSpeed;
+        }
+        Physics.gravity = new Vector3(Physics.gravity.x, Physics.gravity.y, Physics.gravity.z - speedAmount);
+        cameraController.ChangeCameraFOV(speedAmount);
     }
 
     private void SpawnStartingChunks()
