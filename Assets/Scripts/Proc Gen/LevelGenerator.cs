@@ -31,7 +31,7 @@ public class LevelGenerator : MonoBehaviour
     {
         MoveChunks();
     }
-    public void changeChunkMoveSpeed(float speedAmount)
+    public void ChangeChunkMoveSpeed(float speedAmount)
     {
         float newMoveSpeed = moveSpeed + speedAmount;
         newMoveSpeed = Mathf.Clamp(newMoveSpeed, minMoveSpeed, maxMoveSpeed);

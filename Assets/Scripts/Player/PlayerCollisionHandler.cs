@@ -23,7 +23,7 @@ public class PlayerCollisionHandler : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (cooldownTimer < collisionCooldown) return;
-        levelGenerator.changeChunkMoveSpeed(adjustChangeMoveSpeedAmount);
+        levelGenerator.ChangeChunkMoveSpeed(adjustChangeMoveSpeedAmount);
         myAnimator.SetTrigger(hitString);
         cooldownTimer = 0f;
     }
