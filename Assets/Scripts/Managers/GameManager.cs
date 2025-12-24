@@ -45,4 +45,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0.1f;
         playerController.enabled = false;
     }
+    public void IncreaseTime(float time)
+    {
+        timeLeft += time;
+    }
 }
